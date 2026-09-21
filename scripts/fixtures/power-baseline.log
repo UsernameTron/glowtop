@@ -1,0 +1,468 @@
+Machine model: Mac16,7
+OS version: FIXTURE
+Boot arguments: 
+
+
+*** Sampled system activity (fixture settle-1) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-2) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-3) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-4) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-5) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-6) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-7) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-8) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-9) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-10) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-11) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-12) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-13) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-14) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-15) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-16) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-17) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-18) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-19) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture settle-20) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 9999 mW
+GPU Power: 8888 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 19999 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture sample-1) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 100 mW
+GPU Power: 8 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 108 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture sample-2) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 110 mW
+GPU Power: 10 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 120 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture sample-3) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 3000 mW
+GPU Power: 300 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 3300 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture sample-4) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 200 mW
+GPU Power: 28 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 228 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture sample-5) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 210 mW
+GPU Power: 30 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 240 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture sample-6) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 4000 mW
+GPU Power: 400 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 4400 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture sample-7) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 150 mW
+GPU Power: 18 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 168 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture sample-8) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 160 mW
+GPU Power: 20 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 180 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW
+
+*** Sampled system activity (fixture sample-9) (1020.00ms elapsed) ***
+
+**** Processor usage ****
+
+E-Cluster Online: 100%
+
+CPU Power: 2000 mW
+GPU Power: 200 mW
+ANE Power: 0 mW
+Combined Power (CPU + GPU + ANE): 2200 mW
+
+**** GPU usage ****
+
+GPU HW active frequency: 338 MHz
+GPU Power: 7777 mW

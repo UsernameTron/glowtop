@@ -1,0 +1,16 @@
+.build/
+build/
+*.xcodeproj/
+*.xcworkspace/
+.swiftpm/
+DerivedData/
+.DS_Store
+docs/measurements/*.log
+# local measurement scratch (harness runs, parity captures, profiles)
+before-reading/
+after-reading/
+pane-cost-*/
+gate9-*/
+harness-*/
+rss-*/
+parity-*/
