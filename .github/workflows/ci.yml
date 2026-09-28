@@ -11,17 +11,12 @@ permissions:
 jobs:
   build-and-test:
     # GlowTop is verified warning-free with Xcode 27 / Swift 6.4. The macos-15 image's
-    # default toolchain (Swift 6.1.2) reports two strict-concurrency warnings that newer
-    # compilers do not, so CI uses the newer image and its newest stable Xcode.
+    # default toolchain (Swift 6.1.2) reports two strict-concurrency warnings, so CI uses
+    # the newer macos-26 image and its default Xcode. The Toolchain step logs which one ran.
     runs-on: macos-26
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
-      - name: Select the newest stable Xcode
-        run: |
-          ls -d /Applications/Xcode*.app || true
-          xcode=$(ls -d /Applications/Xcode_*.app 2>/dev/null | grep -vi beta | sort -t_ -k2 -n | tail -n 1)
-          if [ -n "$xcode" ]; then echo "DEVELOPER_DIR=$xcode/Contents/Developer" >> "$GITHUB_ENV"; fi
       - name: Toolchain
         run: xcodebuild -version && swift --version
       - name: Build (warnings are errors)

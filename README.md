@@ -51,7 +51,7 @@ defaults delete com.glowtop.GlowTop theme.presetName theme.customTokens theme.ve
 
 ## Build from source
 
-Needs **full Xcode** (verified with Xcode 27 / Swift 6.4; `Package.swift` declares tools version 5.10), not just the Command Line Tools — the SwiftUI macro plugin ships only with Xcode. After any Xcode update, accept its license first (`sudo xcodebuild -license accept`) or every `swift` command will refuse to run. Older toolchains are not warning-free: with Swift 6.1.2 the app target reports two strict-concurrency warnings.
+Needs **full Xcode** (verified with Xcode 27 / Swift 6.4; `Package.swift` declares tools version 5.10), not just the Command Line Tools — the SwiftUI macro plugin ships only with Xcode. After any Xcode update, accept its license first (`sudo xcodebuild -license accept`) or every `swift` command will refuse to run. The Swift 6.1.2 toolchain that ships with Xcode 16.4 is not warning-free: it reports two strict-concurrency warnings in the app target.
 
 ```bash
 swift build                    # warning-free debug build
