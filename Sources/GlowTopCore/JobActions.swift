@@ -61,7 +61,7 @@ public enum JobActionability: Sendable, Equatable {
 public enum JobActions {
     /// §14.4's two read-only tooltips, verbatim. `Launch Agent` (the user's own
     /// `~/Library/LaunchAgents`) is the only type left actionable; `Launch Daemon` and
-    /// `Launch Agent (system)` are read-only for this phase (D-08, flagged for Connor).
+    /// `Launch Agent (system)` are read-only for this phase (D-08, flagged for the maintainer).
     public static func actionability(of job: LaunchdJob) -> JobActionability {
         switch job.type {
         case "Launch Daemon":

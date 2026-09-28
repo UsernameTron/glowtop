@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    # GlowTop is verified warning-free with Xcode 27 / Swift 6.4. The macos-15 image's
+    # default toolchain (Swift 6.1.2) reports two strict-concurrency warnings, so CI uses
+    # the newer macos-26 image and its default Xcode. The Toolchain step logs which one ran.
+    runs-on: macos-26
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Toolchain
+        run: xcodebuild -version && swift --version
+      - name: Build (warnings are errors)
+        run: swift build -Xswiftc -warnings-as-errors
+      - name: Test
+        # Skipped here, run on real hardware as part of the maintainer's full 416-test gate:
+        # five tests read Apple Silicon sensors GitHub's virtual machines do not expose, and
+        # SummaryFramesTests drives live 10 Hz timing that a shared runner cannot hold.
+        run: >-
+          swift test
+          --skip 'EnergyProviderTests/testFirstSampleWarms'
+          --skip 'FrequencyProviderTests/testFirstSampleWarms'
+          --skip 'GPUProviderTests/testFirstSampleWarms'
+          --skip 'MetricStoreLoopTests/testFourLoopsRunAtFourDistinctRates'
+          --skip 'ProcessProviderTests/testReadEnergyNanojoulesForOwnProcess'
+          --skip 'SummaryFramesTests/'
+      - name: Spec references resolve
+        run: scripts/check-spec-refs.sh

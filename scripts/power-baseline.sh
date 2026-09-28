@@ -1,7 +1,7 @@
 #!/bin/bash
 # Package-power baseline: the candidate instrument for the compositor budget (SPEC.md §13.1.8, §13.1.9).
 #
-# powermetrics needs root, so Connor runs this. Sessions never run it and the app never
+# powermetrics needs root, so the maintainer runs this. Sessions never run it and the app never
 # calls it (CLAUDE.md safety rules). Three channels are reported separately — CPU, GPU, and
 # combined (CPU + GPU + ANE) — because the first smoke run put all of the noise in CPU
 # (188–2238 mW across five idle seconds) and 14 mW in GPU; a sum hides which one moved.

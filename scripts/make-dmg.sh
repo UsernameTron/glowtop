@@ -42,18 +42,19 @@ hdiutil create -volname GlowTop -srcfolder "$STAGING" -ov -format UDZO "$DMG" ||
 hdiutil verify "$DMG" || { echo "make-dmg: hdiutil verify failed" >&2; exit 1; }
 
 IDENTITY="${GLOWTOP_SIGN_IDENTITY:--}"
+NOTARY_PROFILE="${GLOWTOP_NOTARY_PROFILE:-glowtop-notary}"
 if [ "$IDENTITY" = "-" ]; then
     echo "make-dmg: UNSIGNED — no GLOWTOP_SIGN_IDENTITY; spctl not asserted"
 else
     echo "make-dmg: signing image (Developer ID)"
     codesign --sign "$IDENTITY" --timestamp "$DMG" || { echo "make-dmg: image signing failed" >&2; exit 1; }
     echo "make-dmg: submitting image for notarization"
-    SUBMIT_OUTPUT=$(xcrun notarytool submit "$DMG" --keychain-profile glowtop-notary --wait 2>&1)
+    SUBMIT_OUTPUT=$(xcrun notarytool submit "$DMG" --keychain-profile "$NOTARY_PROFILE" --wait 2>&1)
     echo "$SUBMIT_OUTPUT"
     if ! echo "$SUBMIT_OUTPUT" | grep -q 'status: Accepted'; then
         SUBMISSION_ID=$(echo "$SUBMIT_OUTPUT" | awk '/id:/{print $2; exit}')
         echo "make-dmg: notarization did not report Accepted -- fetching log for $SUBMISSION_ID" >&2
-        xcrun notarytool log "$SUBMISSION_ID" --keychain-profile glowtop-notary
+        xcrun notarytool log "$SUBMISSION_ID" --keychain-profile "$NOTARY_PROFILE"
         exit 1
     fi
     xcrun stapler staple "$DMG" || { echo "make-dmg: stapling failed" >&2; exit 1; }

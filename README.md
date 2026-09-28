@@ -51,13 +51,13 @@ defaults delete com.glowtop.GlowTop theme.presetName theme.customTokens theme.ve
 
 ## Build from source
 
-Needs **full Xcode** (verified with Xcode 27 / Swift 6.4), not just the Command Line Tools — the SwiftUI macro plugin ships only with Xcode. After any Xcode update, accept its license first (`sudo xcodebuild -license accept`) or every `swift` command will refuse to run.
+Needs **full Xcode** (verified with Xcode 27 / Swift 6.4; `Package.swift` declares tools version 5.10), not just the Command Line Tools — the SwiftUI macro plugin ships only with Xcode. After any Xcode update, accept its license first (`sudo xcodebuild -license accept`) or every `swift` command will refuse to run. The Swift 6.1.2 toolchain that ships with Xcode 16.4 is not warning-free: it reports two strict-concurrency warnings in the app target.
 
 ```bash
 swift build                    # warning-free debug build
 swift run GlowTopApp           # launch the app
 swift run glowtop-probe cpu    # print live CPU samples as JSON lines
-swift test                     # 416 unit tests
+swift test                     # 416 unit tests; one skips unless GLOWTOP_DISABLE_PRIVATE=1
 make run                       # release build, ad-hoc sign, install to ~/Applications, launch
 scripts/package-app.sh --no-install   # build and sign without installing
 ```
@@ -81,9 +81,10 @@ The layout is modeled on TMOG, a closed-source macOS system monitor whose author
 - [`docs/USER-GUIDE.md`](docs/USER-GUIDE.md) — plain-English guide to reading and using every page
 - [`docs/release-notes-v1.2.0.md`](docs/release-notes-v1.2.0.md) — what is in the current release
 - [`SPEC.md`](SPEC.md) — the full specification, 14 sections
-- [`docs/DEVOPS-HANDOFF.md`](docs/DEVOPS-HANDOFF.md) — build, sign, notarize, verify
+- [`docs/BUILD-AND-RELEASE.md`](docs/BUILD-AND-RELEASE.md) — build, sign, notarize, verify
 - [`docs/measurements/`](docs/measurements/) — raw measurement captures cited by the spec
 - [`CLAUDE.md`](CLAUDE.md) — build commands, provider contract, layering and safety rules
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) · [`SECURITY.md`](SECURITY.md) · [`CHANGELOG.md`](CHANGELOG.md)
 
 ## License
 

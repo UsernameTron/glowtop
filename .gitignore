@@ -14,3 +14,12 @@ gate9-*/
 harness-*/
 rss-*/
 parity-*/
+# editors and local assistant state
+.claude/
+CLAUDE.local.md
+.idea/
+.vscode/
+*.xcuserstate
+# release artifacts outside build/
+*.dmg
+*.dmg.sha256
