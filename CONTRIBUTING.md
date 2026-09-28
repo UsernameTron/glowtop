@@ -22,4 +22,4 @@ swift run GlowTopApp
 
 ## Pull requests
 
-Keep each pull request to one change, say which SPEC.md section it touches, and confirm the build is warning-free and `swift test` passes. CI runs both on every pull request.
+Keep each pull request to one change, say which SPEC.md section it touches, and confirm the build is warning-free and `swift test` passes. CI runs both on every pull request, except six tests that need real Apple Silicon sensors, which run only on a Mac.
