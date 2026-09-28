@@ -81,7 +81,7 @@ The layout is modeled on TMOG, a closed-source macOS system monitor whose author
 - [`docs/USER-GUIDE.md`](docs/USER-GUIDE.md) — plain-English guide to reading and using every page
 - [`docs/release-notes-v1.2.0.md`](docs/release-notes-v1.2.0.md) — what is in the current release
 - [`SPEC.md`](SPEC.md) — the full specification, 14 sections
-- [`docs/DEVOPS-HANDOFF.md`](docs/DEVOPS-HANDOFF.md) — build, sign, notarize, verify
+- [`docs/BUILD-AND-RELEASE.md`](docs/BUILD-AND-RELEASE.md) — build, sign, notarize, verify
 - [`docs/measurements/`](docs/measurements/) — raw measurement captures cited by the spec
 - [`CLAUDE.md`](CLAUDE.md) — build commands, provider contract, layering and safety rules
 

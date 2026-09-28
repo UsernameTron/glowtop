@@ -46,14 +46,14 @@ Every provider ships a `glowtop-probe` subcommand whose numbers are cross-checke
 
 ## Safety rules
 
-- **Two repositories, and no push without Connor's go.** In the maintainer's working copy, `origin` is the private development archive `glowtop-dev` (full history, planning records). The public repository `UsernameTron/glowtop` is published from an export of this tree that omits `.planning/` and `tasks/`, with its own fresh history (first published 2026-09-21, MIT). Never push, tag, release, change a repository's visibility or add a remote without Connor's explicit go for that specific action, and never push this repository's history to the public one.
-- **Notarization is the one sanctioned network call**, made by `xcrun notarytool` through the `glowtop-notary` keychain profile — never by the app, and never with a credential passed on a command line or written to a file.
+- No push, tag, release or visibility change without the maintainer's explicit go for that specific action.
+- **Notarization is the one sanctioned network call**, made by `xcrun notarytool` through a keychain profile (`GLOWTOP_NOTARY_PROFILE`, default `glowtop-notary`) — never by the app, and never with a credential passed on a command line or written to a file.
 - Never `rm` anything outside this repository.
-- Confirm with Connor before any write action against the OS (process kill, `launchctl`, file writes outside the repo).
-- No root, no `sudo`. The app never calls `powermetrics`. The one permitted use is `scripts/power-baseline.sh` as a measurement instrument (SPEC §13.1.8), run by Connor under `sudo` — never by a session.
+- Confirm with the maintainer before any write action against the OS (process kill, `launchctl`, file writes outside the repo).
+- No root, no `sudo`. The app never calls `powermetrics`. The one permitted use is `scripts/power-baseline.sh` as a measurement instrument (SPEC §13.1.8), run by the maintainer under `sudo` — never by a session.
 - No network access anywhere in the app — shipping gate 7 (SPEC §13.7) re-checks it every release (`lsof -nP -i -a -p <pid>` empty over ten minutes).
 - Private APIs (IOReport, IOHIDEventSystem via IOKit) are read-only and wrapped so failure returns `.unavailable`.
 
 ## Planning
 
-Spec-first. The spec is `SPEC.md`; every shipped feature traces to a SPEC.md section, and its amendment log (§14.9) records what changed and why. Day-to-day planning records live in the private archive's `.planning/` and are not part of the public tree.
+Spec-first. The spec is `SPEC.md`; every shipped feature traces to a SPEC.md section, and its amendment log (§14.9) records what changed and why. Day-to-day planning records are kept privately and are not part of this repository.
