@@ -46,7 +46,7 @@ Every provider ships a `glowtop-probe` subcommand whose numbers are cross-checke
 
 ## Safety rules
 
-- No push, tag, release or visibility change without the maintainer's explicit go for that specific action.
+- **Two repositories, and no push without the maintainer's go.** Development happens in a private repository that keeps the full history and the planning records. The public repository `UsernameTron/glowtop` is published from an export of that tree without the planning records, with its own fresh history. Never push, tag, release, change a repository's visibility or add a remote without the maintainer's explicit go for that specific action, and never push the development history to the public repository.
 - **Notarization is the one sanctioned network call**, made by `xcrun notarytool` through a keychain profile (`GLOWTOP_NOTARY_PROFILE`, default `glowtop-notary`) — never by the app, and never with a credential passed on a command line or written to a file.
 - Never `rm` anything outside this repository.
 - Confirm with the maintainer before any write action against the OS (process kill, `launchctl`, file writes outside the repo).
