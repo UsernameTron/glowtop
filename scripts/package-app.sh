@@ -29,6 +29,7 @@ APP="$BUILD_DIR/GlowTop.app"
 ICNS="$BUILD_DIR/GlowTop.icns"
 IDENTIFIER=com.glowtop.GlowTop
 IDENTITY="${GLOWTOP_SIGN_IDENTITY:--}"
+NOTARY_PROFILE="${GLOWTOP_NOTARY_PROFILE:-glowtop-notary}"
 
 echo "package-app: swift build -c release"
 swift build -c release || { echo "package-app: release build failed" >&2; exit 1; }
@@ -80,12 +81,12 @@ if [ "$NOTARIZE" -eq 1 ]; then
     rm -f "$ZIP"
     ditto -c -k --keepParent "$APP" "$ZIP" || { echo "package-app: failed to zip $APP for notarization" >&2; exit 1; }
     echo "package-app: submitting for notarization"
-    SUBMIT_OUTPUT=$(xcrun notarytool submit "$ZIP" --keychain-profile glowtop-notary --wait 2>&1)
+    SUBMIT_OUTPUT=$(xcrun notarytool submit "$ZIP" --keychain-profile "$NOTARY_PROFILE" --wait 2>&1)
     echo "$SUBMIT_OUTPUT"
     if ! echo "$SUBMIT_OUTPUT" | grep -q 'status: Accepted'; then
         SUBMISSION_ID=$(echo "$SUBMIT_OUTPUT" | awk '/id:/{print $2; exit}')
         echo "package-app: notarization did not report Accepted -- fetching log for $SUBMISSION_ID" >&2
-        xcrun notarytool log "$SUBMISSION_ID" --keychain-profile glowtop-notary
+        xcrun notarytool log "$SUBMISSION_ID" --keychain-profile "$NOTARY_PROFILE"
         exit 1
     fi
     rm -f "$ZIP"
