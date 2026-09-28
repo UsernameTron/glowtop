@@ -2,7 +2,7 @@
 
 ## What this is
 
-A local-only macOS desktop app, version 1.2.0 (released 2026-09-21). **No servers, no network calls from the app, no cloud resources.** CI builds and tests every push on a GitHub-hosted macOS runner (`.github/workflows/ci.yml`). The only credential is the maintainer's notarization keychain profile, used at release time. This document exists so a second person can build, verify, and reason about the app without reading all of `SPEC.md`.
+A local-only macOS desktop app, version 1.2.0 (released 2026-09-21). **No servers, no network calls from the app, no cloud resources.** CI builds and tests every pull request and every push to `main` on a GitHub-hosted macOS runner (`.github/workflows/ci.yml`). The only credential is the maintainer's notarization keychain profile, used at release time. This document exists so a second person can build, verify, and reason about the app without reading all of `SPEC.md`.
 
 ## Environment
 
@@ -59,6 +59,6 @@ End users install the notarized DMG from the GitHub releases page (see `README.m
 
 ## Rollback / uninstall
 
-1. Roll back: quit GlowTop and install the previous release — its DMG from the releases page, or from source check out the previous release tag and run `scripts/package-app.sh`. The current release is `v1.2.0`, the first release in this repository.
+1. Roll back: quit GlowTop and install an earlier release — its DMG from the releases page, or from source check out that release's tag and run `scripts/package-app.sh`. `v1.2.0` is currently the only release in this repository.
 2. Uninstall: delete `GlowTop.app` from `/Applications` (or `~/Applications` for a source install).
 3. Optional: `rm -rf ~/Library/Logs/GlowTop` and `defaults delete com.glowtop.GlowTop` — the only two things the app leaves behind.
